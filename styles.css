@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", serif;
+}
+body {
+   background-color: #dfe9f5;
+}
+
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    mix-blend-mode: multiply;
+}
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+}
+
+.div-box {
+    display: flex;
+    height: 500px;
+    width: 750px;
+    background-image: url(https://media.investnews.com.br/uploads/2021/12/coins-paper-money-globe-white-statistic-form-background-1-scaled.jpg);
+    background-size: contain;
+    padding: 50px;
+    border-radius: 160px;
+}
+
+#select1,
+#select2 {
+    width: 300px;
+    height: 45px;
+    margin-bottom: 130px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    border: none;
+}
+
+.div2-inside {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letter-valor {
+    margin-left: 20px;
+}
+
+.div-input {
+    position: relative;
+    display: flex;
+    left: 60px;
+
+}
+
+input {
+    width: 300px;
+    height: 45px;
+    border: none;
+    font-size: 20px;
+    margin-right: 20px;
+}

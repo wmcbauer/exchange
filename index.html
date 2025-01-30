@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>exchange</title>
+</head>
+
+<body>
+    <img class="logo" src="./assets/logo 2.gif" alt="">
+
+    <div class="main-div">
+        <div class="div-box">
+            <div>
+                <label for="">de:</label>
+                <select onchange="changeValue1()" name="" id="select1">
+                    <option value="">Real Brasileiro</option>
+                    <option value="">Euro</option>
+                    <option value="">Libra</option>
+                    <option value="">Dolar Americano</option>
+                </select>
+                <br>
+                <label for="">para:</label>
+                <select onchange="changeValue2()" name="" id="select2">
+                    <option value="">Real Brasileiro</option>
+                    <option value="">Euro</option>
+                    <option value="">Libra</option>
+                    <option value="">Dolar Americano</option>
+                </select>
+                <br>
+                <div class="div-input">
+                    <label class="letter-valor">Valor:</label>
+                    <input class="input-value" type="number" placeholder="digite o valor">
+
+                    <button onclick="clickButton()">converter</button>
+                </div>
+            </div>
+            <div class="div2-inside">
+                <img src="./assets/brasil 2.png" alt="Bandeira do Brasil">
+                <p class="value-to-convert">R$1,00</p>
+                <br>
+                <img src="./assets/Vector.png" alt="Imangem seta">
+                <br>
+
+                <img src="./assets/brasil 2.png" alt="">
+                <p class="value-converted">R$1,00</p>
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
