@@ -141,7 +141,7 @@ function clickButton() {
     // select com euro
 
     if (select1Value.value === 'euro' && select2Value.value === 'euro') {
-        const result = inputValue / coinValue
+        const result = inputValue  / coinValue
 
         valueToConvert.innerHTML = inputValue.toLocaleString("de-DE", {
             style: "currency",

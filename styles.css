@@ -8,9 +8,34 @@ body {
    background-color: #dfe9f5;
 }
 
+.div-header {
+    display: flex;   
+}
+h1 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.pt-1{
+left: 400px;
+top: 150px;
+color:#efb810;
+
+mix-blend-mode: multiply;
+font-weight: bolder;
+font-size: 100px;
+}
+.pt-2 {
+right: 400px;
+top: 150px;
+color:#efb810;
+mix-blend-mode: multiply;
+font-size: 100px;
+}
 
 .logo {
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -70,4 +95,17 @@ input {
     border: none;
     font-size: 20px;
     margin-right: 20px;
+    border-radius: 10px;
+}
+button {
+   background-color:#efb810;
+    padding: 10px;
+    font-weight: bolder;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+}
+button:active{
+    background-color: black;
+    opacity: 0.5;
 }
