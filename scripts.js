@@ -9,7 +9,7 @@ function clickButton() {
     const valueConverted = document.querySelector('.value-converted')
     const inputValue = document.querySelector('.input-value').value
 
-
+const neutralValue = 0
     //valores pra converter do real
     const coinValue = 1
     const reaTodolarValue = 5.90
@@ -27,13 +27,18 @@ function clickButton() {
 
     //select com real
 
+    //real para real
+
     if (select1Value.value === 'real' && select2Value.value === 'real') {
         const result = inputValue / coinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        })
+      if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })}
+else {valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+    inputValue)}
+
 
         valueConverted.innerHTML = result.toLocaleString("pt-BR", {
             style: "currency",
@@ -41,14 +46,18 @@ function clickButton() {
         })
     }
 
+    //real para dolar
+
     if (select1Value.value === 'real' && select2Value.value === 'dolar') {
 
         const result = inputValue / reaTodolarValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        })
+       if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })}
+else {valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+    inputValue)}
 
 
         valueConverted.innerHTML = result.toLocaleString("en-US", {
@@ -57,13 +66,18 @@ function clickButton() {
         })
     }
 
+    //real para euro
+
     if (select1Value.value === 'real' && select2Value.value === 'euro') {
         const result = inputValue / realToeuroValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("pt-BR", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+        inputValue)}
+    
 
         valueConverted.innerHTML = result.toLocaleString("de-DE", {
             style: "currency",
@@ -72,27 +86,36 @@ function clickButton() {
 
     }
 
+    //real para bitcoin
+
     if (select1Value.value === 'real' && select2Value.value === 'bitcoin') {
         const result = inputValue / realTobitcoinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("pt-BR", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+        inputValue)}
+    
 
         valueConverted.innerHTML = result.toFixed(5)
     }
 
     // select com dolar
 
+//dolar para dolar
 
     if (select1Value.value === 'dolar' && select2Value.value === 'dolar') {
         const result = inputValue / coinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("en-US", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+        inputValue)}
+    
 
         valueConverted.innerHTML = result.toLocaleString("en-US", {
             style: "currency",
@@ -100,26 +123,34 @@ function clickButton() {
         })
     }
 
+    //dolar para real
+
     if (select1Value.value === 'dolar' && select2Value.value === 'real') {
         const result = inputValue * reaTodolarValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("en-US", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
         })
+
+        //dolar para euro
     }
     if (select1Value.value === 'dolar' && select2Value.value === 'euro') {
         const result = inputValue * dolarToEuroValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("en-US", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toLocaleString("de-DE", {
             style: "currency",
@@ -127,26 +158,34 @@ function clickButton() {
         })
     }
 
+//dolar para bitcoin
+
     if (select1Value.value === 'dolar' && select2Value.value === 'bitcoin') {
         const result = inputValue / dolarToBitcoinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("en-US", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toFixed(5)
     }
 
     // select com euro
 
+    //euro para euro
+
     if (select1Value.value === 'euro' && select2Value.value === 'euro') {
         const result = inputValue  / coinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("de-DE", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("de-DE", {
             style: "currency",
             currency: "EUR"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toLocaleString("de-DE", {
             style: "currency",
@@ -154,16 +193,18 @@ function clickButton() {
         })
     }
 
-
+//euro para real
 
 
     if (select1Value.value === 'euro' && select2Value.value === 'real') {
         const result = inputValue * realToeuroValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("de-DE", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("de-DE", {
             style: "currency",
             currency: "EUR"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toLocaleString("pt-BR", {
             style: "currency",
@@ -171,13 +212,17 @@ function clickButton() {
         })
     }
 
+//euro para dolar
+
     if (select1Value.value === 'euro' && select2Value.value === 'dolar') {
         const result = inputValue * euroToDolarValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("de-DE", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("de-DE", {
             style: "currency",
             currency: "EUR"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toLocaleString("en-US", {
             style: "currency",
@@ -185,19 +230,25 @@ function clickButton() {
         })
     }
 
+    //euro para bitcoin
+
     if (select1Value.value === 'euro' && select2Value.value === 'bitcoin') {
         const result = inputValue / euroToBitcoinValue
 
-        valueToConvert.innerHTML = inputValue.toLocaleString("de-DE", {
+        if(inputValue.trim() === '') {valueToConvert.innerHTML = neutralValue.toLocaleString("de-DE", {
             style: "currency",
             currency: "EUR"
-        })
+        })}
+    else {valueToConvert.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(
+        inputValue)}
 
         valueConverted.innerHTML = result.toFixed(5)
     }
 
 
     //select com bitcoin
+
+    //bitcoin para bitcoin
 
     if (select1Value.value === 'bitcoin' && select2Value.value === 'bitcoin') {
         const result = inputValue / coinValue
@@ -216,6 +267,8 @@ function clickButton() {
         })
     }
 
+    //bitcoin para dolar
+
     if (select1Value.value === 'bitcoin' && select2Value.value === 'dolar') {
         const result = inputValue * dolarToBitcoinValue
 
@@ -225,6 +278,8 @@ function clickButton() {
             currency: "USD"
         })
     }
+
+    //bitcoin para euro
 
     if (select1Value.value === 'bitcoin' && select2Value.value === 'euro') {
         const result = inputValue * euroToBitcoinValue
@@ -237,9 +292,9 @@ function clickButton() {
     }
 
 
-
-
 }
+
+// trocas nos selects
 
 
 function changeValue1() {
